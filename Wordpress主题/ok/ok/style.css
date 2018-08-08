@@ -1,0 +1,431 @@
+/*
+Theme Name: ok
+Theme URI: http://moooc.cc/archives/641
+
+Author: Mooction
+Author URI: http://moooc.cc
+
+Version: 1.0.3
+Description: A simple theme.
+tags: simple, white, light
+
+*/
+
+body {
+	font-family: Microsoft Yahei UI, Microsoft Yahei, helvetica, arial, sans-serif;
+	overflow-wrap: break-word;
+	font-size: 14px;
+	background-color: #ededed;
+	word-wrap: break-word;
+	color: #444;
+}
+
+body, div, dl, dt, dd, ul, ol, li, code, h1, h2, h3, h4, h5, h6, form,
+fieldset, legend, input, textarea, th, td {margin: 0;padding: 0;}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Microsoft Yahei UI, Microsoft Yahei, helvetica, arial, sans-serif;
+	font-weight: 100;
+}
+h1 {font-size: 28px;}
+h2 {font-size: 26px;}
+h3 {font-size: 24px;}
+h4 {font-size: 20px;}
+h5 {font-size: 16px;}
+h6 {font-size: 14px;}
+input, textarea, select, button {
+	font-family: Microsoft Yahei UI, Microsoft Yahei, helvetica, arial, sans-serif;
+	font-size: 14px;
+	border: #ddd solid 1px;
+	padding: 5px;
+	outline-color: #ddd;
+}
+p {line-height: 24px;margin:18px 0;}
+a {color: #21759b;text-decoration: none;}
+a:hover {color: #0f3647;}
+pre {
+	font-size: 12px;
+	border: 1px dashed #ddd;
+	font-family: serif;
+	padding: 7px;
+	line-height: 12px;
+}
+code{
+	margin-right: 4px;
+	padding: 1px 6px;
+	word-break: break-all;
+	background: #eee;
+	color: #000;
+	font-family: Lucida Console;
+}
+blockquote {padding-left:28px; border-left:solid 2px #ddd; margin:0 28px; font-size: 12px;}
+.v-clearfix:before,.v-clearfix:after {content: '';display:table;}
+.v-clearfix:after {clear:both}
+.v-clearfix {zoom:1}
+::selection {background:rgba(0,144,255,0.15);}
+::-moz-selection {background:rgba(0,144,255,0.15);}
+
+
+/* =顶部
+----------------------------------------------- */
+.metabar {
+	background-color: #ddd;
+	background-image: url("banner.jpg");
+	background-size: cover;
+	background-position: center center;
+}
+.header {
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+}
+.metabar h1.site-logo {line-height: 72px;font-size: 44px;display: inline;}
+.metabar h1.site-logo, .metabar p.site-description, .metabar .nav-menu li a {color: #fff;}
+.metabar h1.site-logo:hover {}
+.metabar p.site-description {margin:0;}
+.metabar .nav-menu {margin-top: 80px; line-height: 48px;}
+.metabar .nav-menu li {display: inline-block;transition: all .2s ease-out;}
+.metabar .nav-menu li:hover {background-color: rgba(0,0,0,.2);box-shadow: inset 0px -2px 0px rgba(0,0,0,.3);}
+.metabar .nav-menu li a {min-width: 48px;padding:0 10px;display: block;}
+
+
+/* =中间
+----------------------------------------------- */
+.site { max-width: 960px; margin: 40px auto; box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.1);}
+.container { padding: 40px 30px; min-height: 300px; background-color: #fff;}
+
+.posts {width: 640px; width: calc(100% - 280px); float: left;}
+.sidebar {float: right; width: 260px;}
+
+.page-content {width: 75%; width: calc(100% - 200px); float: right; margin-bottom: 20px;}
+.page-content .article-title {border: none 2px;padding: 0;margin: 0;}
+.page-side {width: 180px;margin-bottom: 20px;float: left;}
+.page-side .pagemenu li {display: block;margin-bottom: 20px;}
+.page-side .pagemenu li a {
+	display: inline-block;
+	border-radius: 4px;
+	padding: 10px 12px;
+	color: #aaa;
+	border:#ccc 1px dashed;
+	transition: all .2s ease-out;
+}
+.page-side .pagemenu li a:hover {background-color:#ddd;color:#fff;}
+.page-side li.current_page_item a {border:none;color:#fff;background-color:#aaa !important;}
+
+.post {margin-bottom: 40px;border-bottom: 2px dashed #ddd;}
+.postMeta {font-size:12px;}
+
+
+/* =文章翻页+评论翻页
+----------------------------------------------- */
+.navigation {text-align:center; margin: 50px 0;}
+.commentnav {text-align:right; margin: 20px 0;}
+.page-numbers {
+	font-size: 17px;
+	color:#aaa;
+	padding:6px 9px;
+	margin:0px 3px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	transition: all .2s ease-out;
+}
+span.page-numbers.current {color:#fff; background:#aaa;border-color: #aaa;}
+span.page-numbers.dots {border:none;}
+span.page-numbers.page_previous {margin-right:6px;}
+span.page-numbers.page_next {margin-left:6px;}
+a:hover.page-numbers {color: #fff; background: #ddd; text-shadow: none; border-color:#ddd;}
+
+.loadmore {text-align: center; margin-bottom: 14px;}
+#show-more {
+	background-color: #ddd;
+	text-decoration: none;
+	border-radius: 32px;
+	padding: 10px 16px;
+	color: #444;
+	cursor: pointer;
+	transition: all .2s ease-out;
+}
+#show-more:hover {color: #777;}
+#show-more:before {content:'啪啪啪';}
+#show-more:hover:before {content:'雅蠛蝶';}
+
+
+/* =侧栏
+----------------------------------------------- */
+.widget {padding: 15px;}
+.widget ul li {list-style: none;line-height: 18px;margin: 10px 0;}
+.widget-title {margin-bottom:20px;}
+.screen-reader-text {display:none}
+#searchform #searchsubmit {
+	background-color:#ddd;
+	border:0;
+	padding:0 3px;
+	width:50px;
+	height:38px;
+	cursor:pointer;
+}
+#searchform #s {
+	border:1px #ddd solid;
+	line-height:26px;
+	height:26px;
+	width: 160px;
+	width: calc(100% - 62px);
+	float:left;
+	outline: none;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+}
+#wp-calendar {width:100%;}
+#wp-calendar caption {padding:5px 0px;}
+#wp-calendar tr {border-bottom:1px #ddd dotted}
+#wp-calendar th,#wp-calendar td {padding:4px 10px;text-align:center;text-transform:capitalize;}
+#wp-calendar tbody tr td a:link, #wp-calendar tbody tr td a:visited {}
+
+
+/* =底部
+----------------------------------------------- */
+.footer {
+	color: #fff;
+	background-color: #777;
+	clear: both;
+	line-height: inherit;
+}
+.footer .section {
+	width: 90%;
+	max-width: 1120px;
+	padding: 20px 0;
+	margin: auto;
+	text-align: center;
+}
+.footer .section a {color: #fff;text-decoration: none;}
+#footer-widgets {
+	padding: 20px 0 10px 0;
+	background-color: #fff;
+	border-top: 2px dashed #ddd;
+}
+#footer-widgets-wrapper {padding: 0 20px;}
+#footer-widgets .widget {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	padding: 0 15px;
+	word-wrap: break-word;
+	text-align: center;
+	float: left;
+}
+#gotop {
+	display: inline;
+	border: 1px solid #ccc;
+	color: #bbb;
+	text-decoration: none;
+	border-radius: 32px;
+	position:fixed;
+	bottom: 35px;
+	right: 30px;
+	cursor:pointer;
+	padding: 8px;
+	transition: all .2s ease-out;
+}
+#gotop:before {content: '啪啪啪';}
+#gotop:hover {color: #999;border-color: #999;}
+
+
+/* =文章/页面正文
+----------------------------------------------- */
+.article-title {
+	margin-bottom:10px;
+	border-left: solid #21759b 2px;
+	padding-left: 30px;
+	margin-left: -32px;
+}
+.article-content {margin-bottom: 30px;word-wrap:break-word}
+.article-content a {text-decoration: underline}
+.article-content img {max-width: 100%;height: auto}
+.article-content img:hover {}
+.article-content ul,.article-content ol {padding-left: 20px;margin: 14px 0;line-height: 23px;}
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {margin:14px 0}
+.wp-smiley {height: 24px !important;border: none !important;}
+.wp-caption {max-width: 100%}
+.wp-caption img {}
+.wp-caption p.wp-caption-text {
+	font-size: 12px;
+	text-indent: 0;
+	text-align: center;
+}
+.aligncenter, div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.alignleft {float: left; margin-right:10px;}
+.alignright {float: right; margin-left:10px;}
+
+
+/* =评论列表
+----------------------------------------------- */
+.comments-area {padding-top: 20px;border-top: #ddd dashed 2px;}
+.butterBar {
+	position: fixed;
+	right: 30px;
+	top: 20px;
+	z-index: 800;
+}
+.butterBar-message{
+	background:#fff;
+	border-radius:4px;
+	box-shadow:0 1px 1px rgba(0,0,0,.25),0 0 1px rgba(0,0,0,.35);
+	display:inline-block;
+	font-size:14px;
+	padding:12px 25px
+}
+
+.comment-content img {border:none;padding:0;}
+.comment-block {padding:20px 0;border-bottom:1px #ddd dashed;position:relative;}
+.comment-info .avatar{
+	border-radius:100%;
+	float:left;
+	height:40px;
+	width:40px;
+	margin-right: 10px;
+	opacity:1;
+	transition: all .2s ease-out;
+}
+.comment-info .avatar:hover {opacity:.8;}
+.commentshow {margin-bottom:20px;}
+
+.commentlist li{list-style:none;}
+.children {list-style:none;margin-left:50px;}
+
+.publish-date {margin-top:10px;font-size:12px;}
+.author-comment {overflow:hidden;position:relative;}
+.floor{
+	position:absolute;
+	right:0;
+	top:0;
+	color:#ddd;
+	font-size:28px;
+	font-style:italic;
+	padding-top: 20px;
+}
+.floor:before {content:"#"attr(floor);}
+.loading-comments {margin-bottom:20px;}
+.loading-comments:before {content:'加载中...';}
+
+
+/* =评论提交
+----------------------------------------------- */
+#respond {margin-top:10px;}
+.cancel-reply a{margin-left: 10px;padding-left: 10px;border-left: #ddd solid 1px;}
+.comment-form-author #author,
+.comment-form-url #url,
+.comment-form-email #email {margin-right:5px;max-width: 90%}
+#comment {width: 98%;box-shadow: inset 0 1px 2px rgba(0,0,0,.07);}
+.smilies-wrap {display: inline;float: left;max-width: 500px;}
+.smilies-wrap a img {width: 24px;height: 24px;margin: 0 6px;cursor: pointer;}
+.form-submit #submit {
+	background-color: #ddd;
+	color: #444;
+	border-radius: 32px;
+	cursor: pointer;
+	padding: 10px 16px;
+	outline: none;
+	float: right;
+	margin-top: 6px;
+	transition: all .2s ease-out;
+}
+.form-submit #submit:hover {color: #777;}
+
+
+/* =归档样式
+----------------------------------------------- */
+.archive-category-postcount {
+	height:41px;
+	width:41px;
+	background-color:#eee;
+	border-radius:100%;
+	line-height:40px;
+	text-indent:13px;
+}
+.archive-category-posts {
+	margin-left: 20px;
+	margin-bottom: 40px;
+	padding: 0px 20px;
+	border-left: 1px solid #eee;
+	position: relative;
+}
+.archive-category-post {margin:5px;position:relative}
+.archive-category-post:before {
+	background-color:#eee;
+	border-radius:100%;
+	content:"";
+	height:7px;
+	width:7px;
+	top:10px;
+	left:-29px;
+	position:absolute;
+}
+.archive-category-post-title {line-height:24px}
+.archive-category-post:nth-child(n+6){display:none;}
+.archive-category-group:hover 
+.archive-category-post:nth-child(n+5){display:block}
+.archive-category-post-time {
+	font-size:12px;
+	font-style:italic;
+	margin-left:5px;
+	color:#999;
+}
+.archive-category-description {color:#777}
+.archive-category-description:before {
+	display:block;
+	width:39%;
+	height:1px;
+	background-color:#eee;
+	margin: -10px 0 5px 0;
+	content:""
+}
+
+
+/* =进度条样式/audio样式
+----------------------------------------------- */
+.progress-bar {
+	background-color: #777;
+	height: 15px;
+	padding: 5px;
+	margin-bottom: 10px;
+	width: 62%;
+	border-radius: 5px;
+}
+.progress-bar span {
+	display: inline-block;
+	height: 100%;
+	border-radius: 3px;
+	background-color: #999;
+	background-size: 30px 30px;
+	background-image: linear-gradient(135deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+}
+audio::-webkit-media-controls-panel, video::-webkit-media-controls-panel {
+	height: 26px;
+	background-color: #777;
+}
+
+
+/* =自适应
+----------------------------------------------- */
+@media screen and (max-width: 960px) {
+	.sidebar {width: 100%;float: none;clear: both;border: none;text-align: center;}
+	#searchform #s {float:none;}
+	.posts {width: 100%;margin-bottom: 20px;padding-bottom: 20px;border-bottom: 2px dashed #eee;}
+	.page-side {float: none;}
+	.page-content {float: none;width: 100%;}
+}
+@media screen and (max-width: 680px){
+	#gotop {display: none;}
+	.metabar {background-image: none;}
+	.metabar h1.site-logo, .metabar p.site-description, .metabar .nav-menu li a {color: #777;}
+	.smiles {display: block;float: none;}
+	#footer-widgets-wrapper {text-align: center;}
+}
